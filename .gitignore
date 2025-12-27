@@ -205,3 +205,43 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ───────────────────────────────────────────────────────────────
+# Machine Learning / Data Science specific ignores
+# ───────────────────────────────────────────────────────────────
+
+# Data (never commit real data)
+data/raw/*
+data/processed/*
+data/*.csv
+data/*.xlsx
+data/*.parquet
+data/*.zip
+data/*.gz
+
+# Artifacts & models (generated files)
+artifacts/
+models/
+*.joblib
+*.pkl
+*.pickle
+*.h5
+*.onnx
+*.pt
+*.pth
+*.bin
+
+# Experiment tracking outputs
+experiments/
+mlruns/               # MLflow
+wandb/                # Weights & Biases
+*.log
+lightning_logs/
+
+# Large temp files from notebooks / processing
+*.ipynb_checkpoints/  # already there, but make sure
+.DS_Store
+Thumbs.db
+
+# Optional: keep only if you want to track small sample data
+# !data/raw/sample_*.csv
